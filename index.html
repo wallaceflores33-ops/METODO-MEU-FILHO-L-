@@ -7,22 +7,28 @@
 <title>Método Meu Filho Lê — seu filho lendo sozinho em 30 dias</title>
 <meta name="description" content="O método completo em PDF pra você alfabetizar seu filho em casa: fichas, jogos, calendário dia a dia e acompanhamento. Sem mensalidade de reforço.">
 
-<!-- ============================================================
-     META PIXEL — cole seu ID no lugar de SEU_PIXEL_ID
-     ============================================================ -->
-<!--
+<!-- Meta Pixel Code -->
 <script>
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-  document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', 'SEU_PIXEL_ID');
-  fbq('track', 'PageView');
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1033629669602050');
+fbq('track', 'PageView');
 </script>
--->
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1033629669602050&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<script src="https://supermago.b-cdn.net/supermago.js?ver=20250224" defer></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -46,7 +52,7 @@
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
 body{
   font-family:'Nunito',sans-serif;
   color:var(--texto);
@@ -56,7 +62,9 @@ body{
   line-height:1.6;
   font-size:clamp(1rem,.95rem + .3vw,1.13rem);
   overflow-x:hidden;
+  width:100%;
 }
+h1,h2,h3,p{overflow-wrap:break-word;word-break:break-word}
 .wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 clamp(1.1rem,4vw,2.4rem)}
 img,svg{display:block;max-width:100%}
 
@@ -77,7 +85,7 @@ section{position:relative;padding:clamp(3.4rem,7vw,6rem) 0}
   font-size:clamp(1.9rem,1.4rem + 2.6vw,3.15rem);font-weight:900;
   max-width:22ch;margin-bottom:.4rem;
 }
-.sec-title .u{position:relative;white-space:nowrap}
+.sec-title .u{position:relative}
 
 /* divisória pontilhada estilo caligrafia */
 .dotline{height:16px;width:100%;overflow:hidden}
@@ -268,20 +276,6 @@ footer .brand{font-family:'Caveat';font-weight:700;font-size:1.9rem;color:var(--
 footer p{font-size:.85rem;color:var(--texto-2);max-width:640px;margin:.7rem auto 0}
 footer a{color:var(--agua-dark)}
 
-/* ---------- CTA flutuante mobile ---------- */
-.floating{
-  position:fixed;left:0;right:0;bottom:0;z-index:60;
-  background:rgba(255,251,243,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
-  border-top:0;padding:.7rem 1rem;
-  display:flex;gap:.9rem;align-items:center;justify-content:space-between;
-  transform:translateY(120%);transition:transform .35s ease;box-shadow:0 -8px 24px -12px rgba(180,80,40,.4)}
-.floating.show{transform:translateY(0)}
-.floating .fp{font-family:'Fraunces';font-weight:900;color:var(--coral-dark);line-height:1;font-size:1.5rem}
-.floating .fp s{font-family:'Nunito';font-size:.8rem;color:var(--texto-2);font-weight:700;display:block}
-.floating .btn{padding:.8rem 1.2rem;font-size:1rem;border:0;box-shadow:var(--sombra-sm)}
-.floating .btn:hover{box-shadow:var(--sombra)}
-.floating .btn:active{transform:translateY(1px);box-shadow:var(--sombra-sm)}
-
 /* ---------- reveal ---------- */
 html.js .reveal{opacity:0;transform:translateY(26px)}
 html.js .reveal.in{opacity:1;transform:none;transition:opacity .6s ease, transform .6s cubic-bezier(.2,.7,.3,1)}
@@ -321,7 +315,6 @@ html.js .stagger.in > *{animation:pop .5s backwards}
 }
 @media(max-width:640px){
   section{padding:clamp(2.6rem,9vw,3.6rem) 0}
-  .hero h1 br{display:none}
   .cards,.ficha-grid,.bonus-grid,.paraquem{grid-template-columns:1fr}
   .selo:nth-child(n){transform:none}
   .vcard:nth-child(n){transform:none}
@@ -335,8 +328,6 @@ html.js .stagger.in > *{animation:pop .5s backwards}
 }
 @media(max-width:380px){
   .wrap{padding:0 1rem}
-  .floating .fp{font-size:1.25rem}
-  .floating .btn{padding:.7rem .9rem;font-size:.9rem}
 }
 
 @media(prefers-reduced-motion:reduce){
@@ -355,14 +346,13 @@ html.js .stagger.in > *{animation:pop .5s backwards}
     <div class="reveal in">
       <span class="eyebrow">Método Meu Filho Lê ✎</span>
       <h1>
-        Seu filho <span class="u">lendo sozinho em 30 dias
-          <svg class="crayon" viewBox="0 0 600 30" preserveAspectRatio="none" aria-hidden="true"><path d="M6,20 C90,8 150,26 240,16 C330,7 420,25 500,15 C540,10 575,19 594,15"/></svg>
-        </span>
-        <br>— sem gastar 1 real com professor particular
+        Seu filho lendo sozinho em <span class="u">30 dias
+          <svg class="crayon" viewBox="0 0 200 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4,20 C40,8 70,26 110,16 C150,7 175,22 196,15"/></svg>
+        </span> sem gastar 1 real com professor particular
       </h1>
-      <p class="sub">Sabemos que você não tem tempo pra virar professora em casa. Por isso já vem tudo pronto: só 15 minutos por dia seguindo o calendário — zero preparo, zero planejamento.</p>
+      <p class="sub">Sabemos que você não tem tempo pra virar professora em casa. Por isso montei esse Pacote que já vem tudo pronto: só 15 minutos por dia seguindo o calendário e você ensina seu filho ler de forma simples e divertida.</p>
       <div class="hero-cta">
-        <a href="#COLE_SEU_LINK_DE_CHECKOUT_AQUI" class="btn">Quero alfabetizar meu filho agora <span class="arrow">→</span></a>
+        <a href="#comprar" class="btn">Quero alfabetizar meu filho agora <span class="arrow">→</span></a>
         <p class="microcta">Pix, cartão em até <b>12x</b>, acesso liberado <b>na hora</b>.</p>
       </div>
       <div class="trustbar">
@@ -387,44 +377,8 @@ html.js .stagger.in > *{animation:pop .5s backwards}
 
 <div class="dotline" aria-hidden="true"><svg viewBox="0 0 1200 16" preserveAspectRatio="none"><path d="M0,8 H1200" stroke="#FFC93C" stroke-width="3" stroke-dasharray="2 14" stroke-linecap="round" fill="none"/></svg></div>
 
-<!-- ============================== VANTAGENS ============================== -->
-<section class="bg-pessego">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Por que vale mais a pena</span>
-      <h2 class="sec-title">Por que isso funciona melhor que pagar reforço</h2>
-    </div>
-    <div class="cards stagger reveal">
-      <div class="vcard">
-        <div class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-        <p>Economize a mensalidade do professor particular <b>(R$150 a R$400/mês)</b> já no primeiro mês de uso.</p>
-      </div>
-      <div class="vcard">
-        <div class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-        <p>Aplique no horário que for melhor pra sua rotina, sem agenda fixa nem deslocamento.</p>
-      </div>
-      <div class="vcard">
-        <div class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
-        <p>Acompanhe o progresso do seu filho de perto, em vez de só receber um relatório de terceiros.</p>
-      </div>
-      <div class="vcard">
-        <div class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div>
-        <p>Material pensado pra quem <b>não é professor</b> — passo a passo simples, sem jargão pedagógico.</p>
-      </div>
-      <div class="vcard">
-        <div class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 2H7a2 2 0 0 0-2 2v18l7-3 7 3V4a2 2 0 0 0-2-2Z"/></svg></div>
-        <p>Reutilize com quantos filhos quiser, quantas vezes precisar — <b>não é assinatura</b>.</p>
-      </div>
-      <div class="vcard">
-        <div class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg></div>
-        <p>Acesso imediato: começa hoje, sem esperar vaga ou agendar aula.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============================== ENTREGÁVEIS ============================== -->
-<section class="bg-creme">
+<section class="bg-pessego">
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow">Abra o caderno e veja</span>
@@ -483,6 +437,8 @@ html.js .stagger.in > *{animation:pop .5s backwards}
   </div>
 </section>
 
+<div class="dotline" aria-hidden="true"><svg viewBox="0 0 1200 16" preserveAspectRatio="none"><path d="M0,8 H1200" stroke="#FFC93C" stroke-width="3" stroke-dasharray="2 14" stroke-linecap="round" fill="none"/></svg></div>
+
 <!-- ============================== PARA QUEM É ============================== -->
 <section class="bg-pessego">
   <div class="wrap">
@@ -496,6 +452,44 @@ html.js .stagger.in > *{animation:pop .5s backwards}
       <div class="pq-item"><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span>Tem um filho de 4 a 8 anos que ainda não lê com fluência ou está começando agora</span></div>
       <div class="pq-item"><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span>Não tem formação em pedagogia e tem medo de "fazer errado" — mas quer tentar com um guia pronto</span></div>
       <div class="pq-item"><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span>Prefere pagar uma vez só, não mensalidade</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="dotline" aria-hidden="true"><svg viewBox="0 0 1200 16" preserveAspectRatio="none"><path d="M0,8 H1200" stroke="#FFC93C" stroke-width="3" stroke-dasharray="2 14" stroke-linecap="round" fill="none"/></svg></div>
+
+<!-- ============================== VANTAGENS ============================== -->
+<section class="bg-creme">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Por que vale mais a pena</span>
+      <h2 class="sec-title">Por que isso funciona melhor que pagar reforço</h2>
+    </div>
+    <div class="cards stagger reveal">
+      <div class="vcard">
+        <div class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <p>Economize a mensalidade do professor particular <b>(R$150 a R$400/mês)</b> já no primeiro mês de uso.</p>
+      </div>
+      <div class="vcard">
+        <div class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <p>Aplique no horário que for melhor pra sua rotina, sem agenda fixa nem deslocamento.</p>
+      </div>
+      <div class="vcard">
+        <div class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <p>Acompanhe o progresso do seu filho de perto, em vez de só receber um relatório de terceiros.</p>
+      </div>
+      <div class="vcard">
+        <div class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div>
+        <p>Material pensado pra quem <b>não é professor</b> — passo a passo simples, sem jargão pedagógico.</p>
+      </div>
+      <div class="vcard">
+        <div class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 2H7a2 2 0 0 0-2 2v18l7-3 7 3V4a2 2 0 0 0-2-2Z"/></svg></div>
+        <p>Reutilize com quantos filhos quiser, quantas vezes precisar — <b>não é assinatura</b>.</p>
+      </div>
+      <div class="vcard">
+        <div class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg></div>
+        <p>Acesso imediato: começa hoje, sem esperar vaga ou agendar aula.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -644,7 +638,7 @@ html.js .stagger.in > *{animation:pop .5s backwards}
         <p class="de">De <s>R$97</s></p>
         <p class="por">Por apenas</p>
         <p class="valor-big"><small>R$</small>19<small>,90</small></p>
-        <a href="#COLE_SEU_LINK_DE_CHECKOUT_AQUI" class="btn">Quero alfabetizar meu filho agora <span class="arrow">→</span></a>
+        <a href="https://pay.kiwify.com.br/Uo8KtTu" id="comprar" class="btn">Quero alfabetizar meu filho agora <span class="arrow">→</span></a>
         <p class="microcta">Pix, cartão em até <b>12x</b>, acesso liberado <b>na hora</b>.</p>
       </div>
     </div>
@@ -684,7 +678,7 @@ html.js .stagger.in > *{animation:pop .5s backwards}
     </div>
 
     <div class="reveal" style="text-align:center;margin-top:2.6rem">
-      <a href="#COLE_SEU_LINK_DE_CHECKOUT_AQUI" class="btn">Quero começar por R$19,90 <span class="arrow">→</span></a>
+      <a href="#comprar" class="btn">Quero começar por R$19,90 <span class="arrow">→</span></a>
       <p class="microcta">Pix, cartão em até <b>12x</b>, acesso liberado <b>na hora</b>.</p>
     </div>
   </div>
